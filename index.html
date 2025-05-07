@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funland Toys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f7;
+      margin: 0;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .call-button {
+      display: inline-block;
+      background-color: #0000FF;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .call-button:hover {
+      background-color: #b71b36;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: #888;
+      margin-top: 50px;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #ffffff;
+      padding: 20px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type=text], textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      padding-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .call-button {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="mainTitle">Welcome to Funland - Hey there, Fun Seekers!</h1>
+  <p>Dive into a magical realm where every toy unlocks imagination, joy, and endless hours of fun. Funland isn't just a store — it's an experience. From the hottest trends to classic treasures, our toy collection caters to dreamers of all ages.</p>
+
+  <img src="toy1.jpg" alt="Toys Display">
+
+  <h2>🎮 Explore Our Magical Toy Realms</h2>
+  <ul>
+    <li><b>Adventure Awaits:</b> Jump into fantasy lands with action figures, vehicles, and worlds ready to be built by curious minds.</li>
+    <li><b>Art & Expression:</b> From painting kits to DIY craft bundles, kids can create, color, and construct to their heart’s content.</li>
+    <li><b>Game Masters:</b> Turn off screens and turn on laughter with fun-filled family board games, brain teasers, and puzzles galore.</li>
+    <li><b>Laugh Out Loud:</b> Silly, quirky, and downright hilarious — our selection of novelty toys delivers non-stop giggles.</li>
+    <li><b>STEM Learning:</b> Build, code, and learn with educational toys that turn science into playtime!</li>
+  </ul>
+
+  <h2>✨ New Arrivals & Limited-Time Deals</h2>
+  <p>Be the first to snag the latest releases and seasonal specials. Our rotating collection ensures there’s always something fresh waiting for you. Whether it’s a robotic dinosaur or a mystery surprise box, you’ll love what’s new at Funland!</p>
+
+  <img src="toy2.jpg" alt="New Arrival Toys">
+
+  <h2>💖 Why Choose Funland?</h2>
+  <ul>
+    <li><b>Top-Quality Brands:</b> Every toy is tested for safety, durability, and maximum fun.</li>
+    <li><b>Fast Delivery:</b> Lightning-fast shipping so your adventures never have to wait long!</li>
+    <li><b>Easy Returns:</b> Changed your mind? No worries. Our hassle-free return policy has you covered.</li>
+    <li><b>Customer Happiness:</b> Our support team is always here to answer questions, make suggestions, or just chat about your favorite toys!</li>
+  </ul>
+
+  <h2>📞 Need Help? Contact Us!</h2>
+  <p>Our toy experts are just a message away! We’d love to help you pick the perfect gift or solve any toy-related mysteries.</p>
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="fname">Full Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Email</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your email">
+
+      <label for="subject">Message</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <h2>📸 Join the Funland Family</h2>
+  <p>Follow us on social media, tag us in your unboxing videos, and be part of a joyful community that lives to play! #FunlandToys</p>
+
+  <p class="footer">© 2025 Funland Inc. All rights reserved. | <a href="privacy_policy.html">Privacy Policy</a> | <a href="tnc.html">Terms & Conditions</a></p>
+
+  <script>
+    gsap.from("#mainTitle", { duration: 1.5, y: -50, opacity: 0, ease: "bounce.out" });
+    gsap.from("img", { duration: 1, scale: 0.8, opacity: 0, stagger: 0.3, ease: "power2.out" });
+    gsap.from("ul li", { duration: 1, x: -30, opacity: 0, stagger: 0.2, ease: "power1.out" });
+    gsap.from(".container", { duration: 1, y: 30, opacity: 0, ease: "power1.out" });
+  </script>
+</body>
+
+</html>
