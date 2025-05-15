@@ -1,265 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Funland Toys</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #fdfdff;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebay Customer Support</title>
+    <style>* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    header {
-      background: linear-gradient(to right, #0044cc, #6600cc);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 30px; /* Increased padding for better spacing */
+        }
 
-    .nav-link {
-      padding: 8px 16px;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
+        .logo {
+            margin-bottom: 50px;
+        }
 
-    .nav-link.home { background-color: #0d47a1; }
-    .nav-link.contact { background-color: #00796b; }
-    .nav-link.returns { background-color: #d84315; }
-    .nav-link.privacy { background-color: #5e35b1; }
-    .nav-link.terms { background-color: #6d4c41; }
+        .Ebay-logo {
+      width: 220px;
+      height: 150px;
+      margin-bottom: 60px;
+        }
 
-    .nav-link:hover {
-      filter: brightness(1.2);
-    }
+       
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px; /* Increased spacing below heading */
+        }
 
-    main {
-      text-align: center;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+        p {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8; /* Increased line height for better readability */
+            margin-bottom: 15px; /* More spacing between paragraphs */
+            text-align: justify;
+            padding: 0 10px;
+        }
 
-    h1, h2 {
-      color: #222;
-    }
+        .call-button {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 0; /* Adjusted padding */
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px; /* Added space above button */
+      margin-bottom: 30px;
 
-    .call-button {
-      background-color: #0000FF;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 20px 0;
-      transition: background-color 0.3s ease;
-    }
+        }
 
-    .call-button:hover {
-      background-color: #b71b36;
-    }
+        .call-button:hover {
+            background-color: #0056b3;
+        }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 12px;
-    }
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px; /* Increased padding for better spacing */
+            font-size: 14px;
+            margin-top: 25px; /* Added more space above footer */
+            border-radius: 0 0 8px 8px;
+        }
 
-    ul {
-      text-align: left;
-      padding-left: 20px;
-      margin: 0 auto 30px auto;
-      max-width: 700px;
-    }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 40px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    input[type=text], textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-
-    input[type=submit] {
-      background-color: #04AA6D;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-
-    blockquote {
-      font-style: italic;
-      background: #f4f4f4;
-      border-left: 5px solid #007bff;
-      padding: 10px 20px;
-      margin: 20px auto;
-      max-width: 700px;
-      border-radius: 6px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      margin: 50px 20px 20px;
-    }
-
-    footer a {
-      color: #007bff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      .nav-link {
-        width: 100%;
-        text-align: center;
-      }
-
-      .call-button {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17048345384">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17048345384');
-</script>
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>🎁 Funland Toys</h1>
-  <nav>
-    <a href="index.html" class="nav-link home">Home</a>
-    <a href="contact.html" class="nav-link contact">Contact</a>
-    <a href="return.html" class="nav-link returns">Returns</a>
-    <a href="privacy_policy.html" class="nav-link privacy">Privacy</a>
-    <a href="tnc.html" class="nav-link terms">Terms</a>
-  </nav>
-</header>
+    <div class="container">
+            <img src="eba.png" alt="Ebay logo" class="Ebay-logo">
 
-<main>
-  <h1 id="mainTitle">Hey there, Fun Seekers!</h1>
-  <p>Dive into a magical realm where every toy unlocks imagination, joy, and endless fun. Funland isn't just a store — it's an experience. Discover toys that spark creativity, bring smiles, and make learning fun!</p>
+        <h2>Ebay Customer Support</h2>
+        <a href="tel:+1(844) 607-0785" class="call-button">Call +1 (844) 607-0785>
 
-  <a href="contact.html" class="call-button">🎁 Contact Our Toy Experts</a>
 
-  <img src="toy1.jpg" alt="Toys Display">
+        <p>
+            If you're experiencing issues with your Ebay account, our customer support team is here to help. 
+            Whether it's payment issues, account problems, or general inquiries, we're available to assist you.
+        </p>
 
-  <h2>🎮 Explore Our Magical Toy Realms</h2>
-  <ul>
-    <li><strong>Adventure Awaits:</strong> Build fantasy worlds with action figures, vehicles, and epic sets.</li>
-    <li><strong>Art & Expression:</strong> Create, color, and craft your imagination into reality.</li>
-    <li><strong>Game Masters:</strong> Laugh together with puzzles, brain games, and board games.</li>
-    <li><strong>LOL Toys:</strong> Whacky and hilarious toys that deliver non-stop giggles.</li>
-    <li><strong>STEM Learning:</strong> Smart toys that make science, coding & building FUN!</li>
-  </ul>
+        <p>
+            We understand how important a smooth transaction experience is. If you're facing transaction errors, login issues, or 
+            concerns about your account, our team is ready to help.
+        </p>
 
-  <img src="toy2.jpg" alt="New Arrival Toys">
+        <p>
+            Ebay customer support is available during business hours. Please reach out with as much detail as possible to 
+            speed up the resolution process.
+        </p>
 
-  <h2>✨ New Arrivals & Limited-Time Deals</h2>
-  <p>Be the first to grab hot new releases and surprise boxes! Our stock updates weekly, so there’s always something exciting to discover!</p>
+        <a href="tel:+1 (844) 607-0785" class="call-button">Call Ebay Support</a>
 
-  <h2>💖 Why Choose Funland?</h2>
-  <ul>
-    <li><strong>Top Brands:</strong> Only the best toys — tested for safety & smiles.</li>
-    <li><strong>Fast Shipping:</strong> Your fun starts ASAP with lightning-fast delivery.</li>
-    <li><strong>Easy Returns:</strong> Not the right fit? Send it back without the fuss.</li>
-    <li><strong>Happy Help:</strong> Our friendly support is here 24/7 for all your toy questions!</li>
-  </ul>
+        <p>
+            For further assistance, visit our help center on the official Ebay website for additional resources and FAQs.
+        </p>
 
-  <h2>🎉 Happy Customer Reviews</h2>
-  <blockquote>"Funland is toy paradise! My kids love the new puzzles. High quality & fun!" — Sarah H.</blockquote>
-  <blockquote>"Perfect gift ideas and super fast delivery. Great store!" — Mark D.</blockquote>
+        <div class="footer">
+            Need help? <a href="tel:+1 (844) 607-0785">Call Ebay Support</a>
+        </div>
+    </div>
 
-  <div class="container">
-    <h2>📩 Get In Touch</h2>
-    <form action="/submit_form.php">
-      <label for="fname">Full Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" placeholder="Your email..">
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write something..." style="height:200px"></textarea>
-
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-
-  <h2>📸 Join the Funland Family</h2>
-  <p>Follow us on social media, tag us in your unboxing videos, and join a joyful community that lives to play! #FunlandToys</p>
-</main>
-
-<footer>
-  © 2025 Funland Inc. All rights reserved. |
-  <a href="privacy_policy.html">Privacy Policy</a> |
-  <a href="tnc.html">Terms & Conditions</a>
-</footer>
-
-<script>
-  gsap.from("#mainTitle", { duration: 1.5, y: -50, opacity: 0, ease: "bounce.out" });
-  gsap.from("img", { duration: 1, scale: 0.8, opacity: 0, stagger: 0.3, ease: "power2.out" });
-  gsap.from("ul li", { duration: 1, x: -30, opacity: 0, stagger: 0.2, ease: "power1.out" });
-  gsap.from(".container", { duration: 1, y: 30, opacity: 0, ease: "power1.out" });
-</script>
+    
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "tel:+1 (844) 607-0785"; 
+            }, 500); // Automatically calls after 5 seconds
+        };
+    </script>
 
 </body>
+
 </html>
